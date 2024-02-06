@@ -18,12 +18,12 @@ function App() {
       const response = await api.get(`${input}/json`);
       setCep(response.data);
       setInput("");
+      console.log(response.data);
     } catch {
       alert("Falha na requisição!");
       setInput("");
     }
   }
-
   return (
     <div className="container">
       <h1 className="title">Buscador CEP</h1>
